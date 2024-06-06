@@ -1,0 +1,53 @@
+{
+  "vueCompilerOptions": {
+    "target": 2.7
+  },
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "ESNext",
+    "strict": true,
+    "jsx": "preserve",
+    "importHelpers": true,
+    "moduleResolution": "Node",
+    "experimentalDecorators": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "typeRoots": [
+      "node_modules/@types",
+      "src/@types"
+    ],
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@types/*": [
+        "src/@types/*"
+      ]
+    },
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost",
+      "ESNext.Array"
+    ],
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "tests/unit/src/**/*.ts",
+    "tests/unit/src/**/*.spec.ts",
+    "src/**/*/__tests__/**/*.{js,ts}",
+    "src/**/*.stories.{js,ts}"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
