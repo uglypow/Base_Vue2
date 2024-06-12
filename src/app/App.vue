@@ -1,22 +1,28 @@
 <template>
   <v-app>
     <header>
-      <div id="hello">Hello</div>
+      <div>
+        <BoxMap />
+        <Modal />
+      </div>
       <VPortalTutorial />
     </header>
   </v-app>
 </template>
 
 <script>
-import VPortalTutorial from '@/components/portalTutorial/VPortalTutorial.vue'
+import BoxMap from '@/components/portalTutorial/BoxMap.vue';
+import VPortalTutorial from '@/components/portalTutorial/VPortalTutorial.vue';
+import Modal from '@/components/portalTutorial/Modal.vue'
+
 export default {
   name: 'App',
   components: {
-    VPortalTutorial
+    VPortalTutorial,
+    BoxMap,
+    Modal
   }
 }
 </script>
 
-<style scoped>
-</style>
-
+<style scoped></style>

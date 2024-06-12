@@ -10,23 +10,11 @@ declare type portalTutorial = PortalTutorialPlugin
 
 declare interface IPortalTutorialInitOptions {
   baseUrl: string;
-  position?: {
-    top?: number;
-    left?: number;
-    bottom?: number;
-    right?: number;
-  };
 }
 
 export interface IPortalTutorialRenderOptions {
   storage?: boolean;
   onError?: ErrorListener;
-  position?: {
-    top?: number;
-    left?: number;
-    bottom?: number;
-    right?: number;
-  };
 }
 
 declare global {

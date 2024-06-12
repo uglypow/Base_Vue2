@@ -1,5 +1,5 @@
-import { IPortalTutorialRenderOptions } from '@/@types/nc-tutorial';
-import Vue from 'vue';
+import { IPortalTutorialRenderOptions } from '@/@types/nc-tutorial'
+import Vue from 'vue'
 
 export enum PortalTutorialEvent {
   ON_LOAD = 'onload',
@@ -65,9 +65,13 @@ export class PortalTutorialPlugin {
   }
 
   public onLoad(listener: VoidFunction) {
-    console.log(window)
-    console.log(window.ncPortalTutorial)
-    window.ncPortalTutorial.onLoad(listener)
+    const onloadListener = (eventName: string) => {
+      if (eventName === PortalTutorialEvent.ON_LOAD) {
+        window.ncPortalTutorial.onLoad(listener)
+        this.listeners.delete(onloadListener)
+      }
+    }
+    this.listeners.add(onloadListener)
   }
 
   public subscribe(listener: Listener) {

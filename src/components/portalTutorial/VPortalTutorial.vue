@@ -22,12 +22,7 @@ export default class VPortalTutorial extends Vue {
 
   public mounted() {
     this.$ncPortalTutorial?.onLoad(() => {
-      this.$ncPortalTutorial?.render(this.portalTutorialComponent, {
-        position: {
-          bottom: 15,
-          right: 15
-        }
-      })
+      this.$ncPortalTutorial?.render(this.portalTutorialComponent, {})
       this.$ncPortalTutorial?.open()
     })
   }
